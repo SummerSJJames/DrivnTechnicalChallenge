@@ -1,0 +1,27 @@
+Applications:
+- Node.js
+- Express.js
+- Axios
+- md5
+- PostgreSQL
+- pg
+- Postman API Platform
+
+The API provided always resulted in an authentication error, so I implemented my own with a similar setup.
+
+Application Flow:
+1. User Registration: Accepts new user registration data via a POST request to /register endpoint.
+2. Fetching Additional User Information: Retrieves user information from an external API using Axios.
+3. Handling API Responses: Checks API response status codes for authentication, request errors, or successful retrieval.
+4. Database Interaction: Stores user data into PostgreSQL database after successful registration and API response.
+
+Setup and Configuration:
+- Express setup for handling HTTP requests.
+- PostgreSQL connection established using pg package.
+- Route defined for user registration endpoint.
+- Server initialized to listen for incoming requests.
+- Postman to send POST requests.
+
+Improvements:
+- Remove hardcoding.
+- Prevent possible sql injections.
